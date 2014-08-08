@@ -1,0 +1,16 @@
+blueprint:
+  name: bp-example1
+  description: blueprint example1
+  icon: 
+    file : redstone.png
+    content : (--- base64 encoded ---)
+  # by default, it should refer to our forj web documentation, to present the blueprint documentation. But we can propose to change it.
+  documentation : 'http://openstack.org/forj'
+  locations:
+    modules: 
+      - src-repo: bp-example1
+        git: https://github.com/daihaojun/bp-example1.git
+        install:
+          puppet-apply: install
+        uninstall:
+          puppet-apply: uninstall
